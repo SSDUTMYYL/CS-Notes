@@ -206,6 +206,11 @@ String 不可变性天生具备线程安全，可以在多个线程中安全地�
 [Program Creek : Why String is immutable in Java?](https://www.programcreek.com/2013/04/why-string-is-immutable-in-java/)
 
 ## String, StringBuffer and StringBuilder
+***适用场景：***  
+Situations:
+- If your string is not going to change use a String class because a String object is immutable.
+- If your string can change (example: lots of logic and operations in the construction of the string) and will only be accessed from a single thread, using a StringBuilder is good enough.
+- If your string can change, and will be accessed from multiple threads, use a StringBuffer because StringBuffer is synchronous so you have thread-safety.
 
 **1. 可变性**  
 
